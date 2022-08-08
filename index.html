@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <script type="text/javascript" src="./js/teamTableGenerator.js"></script>
+    <script type="text/javascript" src="./js/commandsTableGenerator.js"></script>
+    <script type="text/javascript" src="./js/tabcontrol.js"></script>
+</head>
+
+<body>
+
+ <H1>Starquest - game monitor</H1>
+
+ <ul>
+	<li><a href="javascript:rudrSwitchTab('tb_1', 'content_1');" id="tb_1" class="tabmenu active">Game configuration</a></li>
+	<li><a href="javascript:rudrSwitchTab('tb_2', 'content_2');" id="tb_2" class="tabmenu">Roll the dices</a></li>
+</ul>
+ 
+<div id="content_1" class="tabcontent"> 
+	<H2>Game configuration</H2>
+
+    <details open id="Step_1">
+        <summary>1. Which GSG Teams are going to fight against Chaos?</summary>
+        <table>
+            <tr>
+                <th>Red</th>
+                <th>Yellow</th>
+                <th>Blue</th>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="RedTeamInvolved" value="RedTeamInvolved"></td>
+                <td><input type="checkbox" id="YellowTeamInvolved" value="YellowTeamInvolved"></td>
+                <td><input type="checkbox" id="BlueTeamInvolved" value="BlueTeamInvolved"></td>
+            </tr>
+            
+          </table> 
+    
+          <button type="button" id="btn" onclick="generateWeaponTable()">Finished!</button>
+    </details>
+      
+    <details id="Step_2">
+        <summary>2. Chose your teams, their equipment and special features</summary>
+        <table id="teamTable">
+        </table> 
+
+        <button type="button" id="btn" onclick="generateCommandTable()">Finished!</button>
+    </details>
+      
+    <details id="Step_3">
+        <summary>3. Chose special commands for the following list!</summary>
+        <table id="commandTable">
+        </table> 
+        <button type="button" id="btn" onclick="rudrSwitchTab('tb_2', 'content_2');">Config Finished!</button>
+    </details>
+        
+</div> 
+<div id="content_2" class="tabcontent" style="display:none;">
+	
+    Here we all miss the actual game mode ... comming soon!
+
+</div>
+  
+</body>
+
+</html>
