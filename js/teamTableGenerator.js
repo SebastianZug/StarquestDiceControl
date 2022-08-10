@@ -14,15 +14,15 @@ function generateWeaponTable() {
     row = generateWeaponAddHeading();
     tbody.appendChild(row);
 
-    var RedTeamInvolved = document.getElementById('RedTeamInvolved');
+    var RedTeamInvolved = document.getElementById('teamInvolved_Red');
     if (RedTeamInvolved.checked){
         generateWeaponAddTeam("Red", tbody);
     }
-    var BlueTeamInvolved = document.getElementById('BlueTeamInvolved');
+    var BlueTeamInvolved = document.getElementById('teamInvolved_Blue');
     if (BlueTeamInvolved.checked){
         generateWeaponAddTeam("Blue", tbody);
     }
-    var YellowTeamInvolved = document.getElementById('YellowTeamInvolved');
+    var YellowTeamInvolved = document.getElementById('teamInvolved_Yellow');
     if (YellowTeamInvolved.checked){
         generateWeaponAddTeam("Yellow", tbody);
     }

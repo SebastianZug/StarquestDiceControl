@@ -2,9 +2,11 @@
 <html>
 
 <head>
+    <script type="text/javascript" src="./js/config.js"></script>
     <script type="text/javascript" src="./js/teamTableGenerator.js"></script>
     <script type="text/javascript" src="./js/commandsTableGenerator.js"></script>
     <script type="text/javascript" src="./js/tabcontrol.js"></script>
+    <script type="text/javascript" src="./js/extractConfigData.js"></script>
 </head>
 
 <body>
@@ -28,9 +30,9 @@
                 <th>Blue</th>
             </tr>
             <tr>
-                <td><input type="checkbox" id="RedTeamInvolved" value="RedTeamInvolved"></td>
-                <td><input type="checkbox" id="YellowTeamInvolved" value="YellowTeamInvolved"></td>
-                <td><input type="checkbox" id="BlueTeamInvolved" value="BlueTeamInvolved"></td>
+                <td><input type="checkbox" id="teamInvolved_Red"></td>
+                <td><input type="checkbox" id="teamInvolved_Yellow"></td>
+                <td><input type="checkbox" id="teamInvolved_Blue"></td>
             </tr>
             
           </table> 
@@ -50,7 +52,9 @@
         <summary>3. Chose special commands for the following list!</summary>
         <table id="commandTable">
         </table> 
-        <button type="button" id="btn" onclick="rudrSwitchTab('tb_2', 'content_2');">Config Finished!</button>
+        <button type="button" id="btn" 
+                onclick="collectConfigData();
+                         rudrSwitchTab('tb_2', 'content_2');">Config Finished!</button>
     </details>
         
 </div> 
@@ -59,7 +63,10 @@
     Here we all miss the actual game mode ... comming soon!
 
 </div>
-  
+<script type="text/javascript">
+    // Nothing
+</script>
+
 </body>
 
 </html>

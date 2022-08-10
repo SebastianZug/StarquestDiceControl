@@ -10,15 +10,15 @@ function generateCommandTable() {
     row = generateCommandTableAddHeading();
     tbody.appendChild(row);
 
-    var RedTeamInvolved = document.getElementById('RedTeamInvolved');
+    var RedTeamInvolved = document.getElementById('teamInvolved_Red');
     if (RedTeamInvolved.checked){
         generateCommandTableAddTeam("Red", tbody);
     }
-    var BlueTeamInvolved = document.getElementById('BlueTeamInvolved');
+    var BlueTeamInvolved = document.getElementById('teamInvolved_Blue');
     if (BlueTeamInvolved.checked){
         generateCommandTableAddTeam("Blue", tbody);
     }
-    var YellowTeamInvolved = document.getElementById('YellowTeamInvolved');
+    var YellowTeamInvolved = document.getElementById('teamInvolved_Yellow');
     if (YellowTeamInvolved.checked){
         generateCommandTableAddTeam("Yellow", tbody);
     }
